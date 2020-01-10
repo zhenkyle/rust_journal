@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# script/bootstrap: Resolve all dependencies that the application requires to
+#                   run.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+if [ "$(uname -s)" = "Linux" ] && [ -f "/etc/arch-release" ]; then
+
+  # Install if needed
+  which zola >/dev/null 2>&1  || {
+    echo "==> Installing Dependencie"
+    which git >/dev/null 2>&1 || {
+	sudo pacman -S git
+    }
+    mkdir vendor && cd "vendor" && git clone https://aur.archlinux.org/zola-bin.git && cd "zola-bin" && makepkg -si --noconfirm && cd "../.."
+  }
+elif [ "$(uname -s)" = "Linux" ] && [ -f "/etc/debian_version" ]; then
+
+  # Install if needed
+  which zola >/dev/null 2>&1  || {
+    echo "==> Installing Dependencie"
+    curl -s -L https://github.com/getzola/zola/releases/download/v0.9.0/zola-v0.9.0-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
+  }
+else
+  echo "Sorry, only support ArchLinux and debian system."
+  exit 1
+fi
