@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://zhenkyle.github.io/rust_journal/sitemap.xml
