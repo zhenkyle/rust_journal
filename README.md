@@ -1,13 +1,6 @@
-# emacs_journal
-My Emacs journal
+# rust_journal
+My Rust journal
 # TODO
-* rust mode
-* powerline
-* nyan mode
-* incoprate with git
-* emacs VS spacemac VS emacs doom
-* org mode
-* emacs project VS projectile
-* emacs key-binding cheat sheet
-* helm
-* view linux source like a pro
+* blog_object_oriented_version
+* blog_type_version
+* multithreaded_web_server

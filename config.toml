@@ -1,7 +1,7 @@
 # The URL the site will be built for
-base_url = "https://zhenkyle.github.io/emacs_journal"
-title = "Emacs Journal"
-description = "My Emacs journal"
+base_url = "https://zhenkyle.github.io/rust_journal"
+title = "Rust Journal"
+description = "My Rust journal"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -24,10 +24,10 @@ taxonomies = [
 # BEGIN for hyde
 #hyde_sticky = true
 #hyd_reverse = false
-hyde_theme = "theme-base-09"
+hyde_theme = "theme-base-0a"
 hyde_links = [
-    {url = "https://github.com/zhenkyle/emacs_journal", name = "Edit"},
-    {url = "https://travis-ci.org/zhenkyle/emacs_journal", name = "CI status"},
+    {url = "https://github.com/zhenkyle/rust_journal", name = "Edit"},
+    {url = "https://travis-ci.org/zhenkyle/rust_journal", name = "CI status"},
 ]
 # END for hyde
 
